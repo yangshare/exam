@@ -1,0 +1,515 @@
+BODY
+{
+    FONT-FAMILY: "宋体";
+    FONT-SIZE: 9pt;
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000;
+    LINE-HEIGHT: 150%;
+    MARGIN-TOP: 1px;
+    MARGIN-LEFT: 0px;
+    MARGIN-RIGHT: 0px;
+}
+
+BODY.nomargin
+{
+    FONT-FAMILY: "宋体";
+    FONT-SIZE: 9pt;
+    COLOR: #000000;
+    LINE-HEIGHT: 150%;
+    MARGIN-TOP: 0px;
+    MARGIN-LEFT: 0px;
+    MARGIN-RIGHT: 0px;
+}
+DIV
+{
+    FONT-FAMILY: "宋体";
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+TD
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+TH
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+TABLE
+{
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%;
+}
+
+TD.title
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #D6E7EF;
+    BORDER-BOTTOM: black 1px solid;
+    BORDER-TOP: white 1px solid;
+    COLOR: #228b22;
+    LINE-HEIGHT: 150%
+}
+
+TR.row
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #EEEEEE;
+    BORDER-BOTTOM: #708090 1cm solid;
+    LINE-HEIGHT: 150%
+}
+TD.row
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #EFF7FF;
+    BORDER-BOTTOM: #708090 1px groove;
+    LINE-HEIGHT: 150%
+}
+TD.row1
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #EEEEEE;
+    LINE-HEIGHT: 150%
+}
+TD.left
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #E7F3F7;
+    BORDER-BOTTOM: #708090 1px groove;
+    LINE-HEIGHT: 150%
+}
+TD.leftbak
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #00b8d8;
+    BORDER-BOTTOM: #708090 1px groove;
+    LINE-HEIGHT: 150%
+}
+TD.right
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #CAF5FB;
+    LINE-HEIGHT: 150%
+}
+TD.bottom
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #D6E7EF;
+    BORDER-BOTTOM: black 1px solid;
+    LINE-HEIGHT: 150%;
+    TEXT-ALIGN: right;
+}
+P.title
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+
+P
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+LI
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+CAPTION
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+INPUT
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+}
+
+SELECT
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%;
+}
+
+TEXTAREA
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+OPTION
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%;
+
+}
+
+FORM
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+
+UL
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 150%
+}
+A:link
+{
+    COLOR: #0065CE;
+    TEXT-DECORATION: none
+}
+
+A:visited
+{
+    COLOR: #0065CE;
+    TEXT-DECORATION: none
+}
+
+A:hover
+{
+    COLOR: #ff0000;
+    TEXT-DECORATION: underline
+}
+
+LI
+{
+    LIST-STYLE: disc
+}
+.boxborder
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #9999ff 1px solid;
+    BORDER-LEFT: #9999ff 0px solid;
+    BORDER-RIGHT: #9999ff 0px solid;
+    BORDER-TOP: #00cc00 0px solid;
+    COLOR: #ff6600
+}
+.title{
+	color: #333333;
+	background-color: #FFFFFF;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+	font-size: 14px;
+	font-weight: normal;
+	width: 90%;
+	margin: 10px 0px 0px;
+}
+.tabletitletext{
+	font: bolder 14px Arial;
+	color: #000080;
+}
+TABLE.tabletoolbar{
+	margin-top: 5px;
+	margin-bottom: 2px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-collapse:collapse;
+	padding-bottom:3px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #253e82;
+	border-right-color: #253e82;
+	border-bottom-color: #253e82;
+	border-left-color: #253e82;
+}
+TABLE.tableframe{
+    background-color: #FFFFFF;
+    margin-top: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#7C9CCF;
+    border-collapse:collapse
+}
+TR.Listtitle
+{
+    font: bold ;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #8CAAE7;
+    BORDER-BOTTOM: #7C9CCF 1px solid;
+    BORDER-TOP: #7C9CCF 1px solid;
+    COLOR: #ffffff;
+    text-align:center;
+    vertical-align:center;
+    height:18px;
+}
+TR.ListtitleBorder
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #8CAAE7;
+    BORDER-BOTTOM: #7C9CCF 1px solid;
+    BORDER-TOP: #7C9CCF 1px solid;
+    BORDER-Left: #7C9CCF 1px solid;
+    BORDER-Right: #7C9CCF 1px solid;
+    COLOR: #ffffff;
+    text-align:center;
+    vertical-align:center;
+    height:18px;
+}
+TR.Listrow2
+{
+	FONT-FAMILY: Arial;
+	FONT-SIZE: 9pt;
+	BACKGROUND: #EBF1FA;
+	border: thin inset #6699FF;
+}
+TR.Listrow1
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #F1F1F1;
+}
+TR.Listrow1_1
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #dFdFdF;
+}
+TR.Listrow3
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #ffffff;
+}
+
+td.ListCellTitle
+{
+  border-style: solid;
+	border-width: 1px 1px 1px 0px;
+	border-color:#999999;
+	padding:2px 2px 2px 2px;
+}
+td.ListCellRow
+{
+  border-style: solid;
+	border-width: 1px;
+	border-color:#999999;
+	padding:0px 4px 0px 4px;
+}
+Td.listtail
+{
+    FONT-SIZE: 9pt;
+    BACKGROUND: #C6D7EF;
+    BORDER-BOTTOM: #999999 1px solid;
+}
+
+TABLE.InputFrameMain{
+	background-color: #EBF1FA;
+	border-collapse:collapse;
+	border: 1px solid #666666;
+	margin: 5px;
+}
+TR.InputFrameLine{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family:'Arial';
+  font-size:9pt;
+}
+TR.InputFrameButtonLine{
+	padding-top: 5px;
+	padding-bottom: 1px;
+	font-family:'Arial';
+  font-size:9pt;
+}
+TD.InputLabelCell{
+	font: bold ;
+  font-family:'宋体';
+  font-size:9pt;
+  color:black;
+  padding-top: 5px;
+  padding-left: 5px;
+	padding-right: 10px;
+	Text-align:right;
+	vertical-align:top;
+	border-style: solid;
+	border-width: 0px;
+	border-color:#9C9C9C;
+}
+TD.InputAreaCell{
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	border-color:#9C9C9C;
+	background-color: #EBF1FA;
+}
+textarea.InputArea
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-STYLE:solid solid solid solid;
+    border-width:1px 1px 1px 1px;
+    border-color:#888888;
+
+}
+select.Inputselect
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-STYLE:solid solid solid solid;
+    border-width:1px 1px 1px 1px;
+    border-color:#888888;
+}
+INPUT.button
+{
+    Height:20px;
+    BACKGROUND-COLOR: #BFCAE6;
+    COLOR: #000080;
+    LINE-HEIGHT: 9pt;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 2px;
+    PADDING-BOTTOM: 2px;
+    CURSOR: hand;
+    border-width:1px;
+    border-style:solid;
+    FONT-FAMILY: "宋体";
+    FONT-SIZE: 9pt;
+}
+INPUT.input
+{
+	BACKGROUND-COLOR: #ffffff;
+	BORDER-STYLE:solid solid solid solid;
+	border-width:1px 1px 1px 1px;
+	border-color:#888888;
+	HEIGHT:15px;
+	LEFT: 0px;
+	TOP: 0px;
+	VERTICAL-ALIGN: center;
+	width: 96%;
+}
+INPUT.inputreadonly
+{
+    BACKGROUND-COLOR: transparent;
+    BORDER-STYLE:solid solid solid solid;
+    border-width:0px 0px 0px 0px;
+    border-color:#888888;
+    color:#000000;
+    LEFT: 0px;
+    TOP: 0px;
+    VERTICAL-ALIGN: center
+}
+.LinkText
+{
+	COLOR:#0065CE;
+	CURSOR:HAND;
+}
+.getdate
+{
+    cursor:hand;
+    behavior: url("getdate_vbs.htc");
+}
+.inputtitle {
+	COLOR: #000000;
+    text-align:center;
+	font: bold ;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    BACKGROUND-COLOR: #C6D7EF;
+    BORDER-BOTTOM: #7C9CCF 1px solid;
+    BORDER-TOP: #7C9CCF 1px solid;
+    COLOR: #ffffff;
+    text-align:center;
+    vertical-align:center;
+    height:18px;
+}
+.line {
+	color: #999999;
+}
+TABLE.toolbar{
+	border-collapse:collapse;
+	border: 0px none #FFFFFF;
+	font-family: "宋体";
+	font-size: 18px;
+	font-weight: bold;
+	color: ##999999;
+	height: 30px;
+	background-image: url(images/&#26410;&#26631;&#39064;-2.jpg);
+}
+TABLE.rightframerow{
+	background-color: #FFFFFF;
+	border-collapse:collapse;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000080;
+	border-right-color: #000080;
+	border-bottom-color: #000080;
+	border-left-color: #000080;
+}
+TABLE.bottomframe{
+	background-color: #7594CC;
+	margin-top: 0px;
+	border-collapse:collapse;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #000080;
+	border-right-color: #000080;
+	border-bottom-color: #000080;
+	border-left-color: #000080;
+}
+TABLE.rightframe{
+	background-color: #ABC7EF;
+	margin-top: 0px;
+	border-collapse:collapse;
+	border-right-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #000080;
+	border-right-color: #000080;
+	border-bottom-color: #000080;
+	border-left-color: #000080;
+}

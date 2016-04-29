@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MenuConfig>
+	<Displayers>
+		<Displayer	name="ListMenu"		type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+		<Displayer   name="TabbedMenu"  type="net.sf.navigator.displayer.TabbedMenuDisplayer"/>
+	</Displayers>
+	<Menus>
+		<Menu		name="TesterMenuExaminee"				title="人员管理"		description="test" width="50">
+			<Item	name="TesterExamineeAdd"   				title="新增考生信息"	location="examinee/addExaminee.do" target="main" />
+			<Item	name="TesterExamineeList"  				title="考生信息维护"	location="examinee/showExaminee.do" target="main" />
+    	</Menu>
+    	<Menu		name="TesterMenuQuestion"				title="题库管理"		description="test" width="50">
+			<Item	name="TesterQuestionAddSingle"  		title="新增单选题"		location="question/initialQuestionAction.do?action=single" target="main" />
+			<Item	name="TesterQuestionAddMultis"  		title="新增多选题"		location="question/initialQuestionAction.do?action=multi" target="main" />
+			<Item	name="TesterQuestionAddBlanks"  		title="新增填空题"		location="question/initialQuestionAction.do?action=fitin" target="main" />
+			<Item	name="TesterQuestionAddCase"  			title="新增简答题"		location="question/initialQuestionAction.do?action=answer" target="main" />
+			<Item	name="TesterQuestionList"  				title="题库信息维护"	location="question/listQuestionAction.do" target="main" />
+    	</Menu>
+    	<Menu		name="TesterMenuPaper"					title="试卷管理"		description="test" width="50">
+			<Item	name="TesterPaperAddPaper"   			title="新增试卷"		location="paper/addSelectorAction.do" target="main" />
+			<Item	name="TesterPaperList"  				title="试卷信息管理"	location="program/searchAction.do?jsp=e_list" target="main" />
+    	</Menu>
+    	<Menu		name="TesterMenuMaintain"				title="考务管理"		description="test" width="50">
+			<Item	name="TesterMaintainPaperDistribute"   	title="考卷分发"		location="program/searchAction.do?jsp=e_distribute" target="main" />
+			<Item	name="TesterMaintainPaper"  			title="考卷管理"		location="program/searchAction.do?jsp=e_manage" target="main" />
+			<Item	name="TesterMaintainGrade"  			title="考卷评分"		location="program/searchAction.do?jsp=e_grademain" target="main" />
+    	</Menu>
+    	<Menu		name="TesterMenuTrainPlan"				title="培训下载维护"	description="test" width="50">
+			<Item	name="TesterTrainPlanAdd"   			title="新增条目"		location="trainPlan/initAddAction.do" target="main" />
+			<Item	name="TesterTrainPlanList"  			title="培训维护"		location="trainPlan/quireTrainPlanAction.do" target="main" />
+    	</Menu>
+    	<Menu		name="TesterMenuAdmin"					title="其它"			description="test" width="50">
+			<Item	name="TesterAdminBasic"   				title="退出登陆"		location="../logoff.do" target="main" />
+    	</Menu>
+    	<Menu name="BaseInfoList" title="基础数据管理" description="test" width="50" >
+    			<Item	name="BaseInfoList"  					title="基础数据管理"		location="baseInfo/baseInfoAction.do" target="main" />
+    	</Menu>
+
+	<!-- New Menu for Tabbed Displayer -->
+		<Menu name="Home" title="首页" page="exam/index.jsp" />
+		<Menu name="GoToTest" title="参加考试" page="exam/examinationPaperListAction.do" />
+		<Menu name="CheckTest" title="考试查询" page="exam/examineeInquiryAction.do" />
+		<Menu name="UserInfo" title="用户资料" page="exam/editExaminee.do" />
+		<Menu name="EditPwd" title="修改密码" page="exam/editPwd.do" />
+		<Menu name="LogOff" title="退出登录" page="logoff.do" />
+		<Menu name="ExamineeInquireTrainPlan" title="培训计划查询" page="exam/examineeQuireTrainPlanAction.do" />
+	</Menus>
+</MenuConfig>

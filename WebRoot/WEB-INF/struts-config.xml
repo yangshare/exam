@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="examineeActionForm" type="org.mmxbb.exam.business.examinee.ExamineeActionForm" />
+    <form-bean name="logonForm" type="org.mmxbb.exam.business.LogonForm" />
+    <form-bean name="chooseExamineeActionForm" type="org.mmxbb.exam.business.program.ChooseExamineeActionForm" />
+    <form-bean name="editAdminPwdActionForm" type="org.mmxbb.exam.business.EditAdminPwdActionForm" />
+    <form-bean name="examineeTestDetailsActionForm" type="org.mmxbb.exam.business.examinee.ExamineeTestDetailsActionForm" />
+    <form-bean name="searchActionForm" type="org.mmxbb.exam.business.program.SearchActionForm" />
+    <form-bean name="distributeActionForm" type="org.mmxbb.exam.business.program.DistributeActionForm" />
+    <form-bean name="trainPlanForm" type="org.mmxbb.exam.business.trainPlan.TrainPlanForm" />
+    <form-bean name="quireTrainPlanForm" type="org.mmxbb.exam.business.trainPlan.QuireTrainPlanForm" />
+    <form-bean name="questionActionForm" type="org.mmxbb.exam.business.question.QuestionActionForm" />
+    <form-bean name="gradeActionForm" type="org.mmxbb.exam.business.program.GradeActionForm" />
+    <form-bean name="examTestActionForm" type="org.mmxbb.exam.business.exam.ExamTestActionForm" />
+    <form-bean name="addExaminationPaperForm" type="org.mmxbb.exam.business.paper.AddExaminationPaperForm" />
+    <form-bean name="examineeInquiryActionForm" type="org.mmxbb.exam.business.exam.ExamineeInquiryActionForm" />
+    <form-bean name="makeSureStopExamTestPaperActionForm" type="org.mmxbb.exam.business.program.MakeSureStopExamTestPaperActionForm" />
+    <form-bean name="makeSureRemoveQuestionForm" type="org.mmxbb.exam.business.paper.MakeSureRemoveQuestionForm" />
+    <form-bean name="preViewExamTestPaperForm" type="org.mmxbb.exam.business.paper.PreViewExamTestPaperForm" />
+    <form-bean name="baseInfoActionForm" type="org.mmxbb.exam.business.baseinfo.BaseInfoActionForm" />
+    <form-bean name="randomDistributeExamPaperForm" type="org.mmxbb.exam.business.program.RandomDistributeExamPaperForm" />
+  </form-beans>
+  <global-forwards>
+    <forward name="showSuccess" path="/success.jsp" />
+    <forward name="admin" path="/admin/" />
+    <forward name="ks" path="/exam/" />
+    <forward name="logoff" path="/logoff.do" />
+    <forward name="error" path="/error.jsp" />
+   
+  </global-forwards>
+  <action-mappings>
+    <action forward="/admin/index.jsp" path="/admin/" />
+    <action forward="/exam/index.jsp" path="/exam/" />
+    <action name="examineeActionForm" path="/admin/examinee/addExaminee" type="org.mmxbb.exam.business.examinee.AddExamineeAction">
+      <forward name="success" path="/admin/examinee/addExaminee.jsp" />
+    </action>
+    <action name="examineeActionForm" path="/admin/examinee/deleteExaminee" type="org.mmxbb.exam.business.examinee.DeleteExamineeAction">
+      <forward name="success" path="/admin/examinee/showExaminee.do" />
+    </action>
+    <action name="examineeActionForm" path="/admin/examinee/editExaminee" type="org.mmxbb.exam.business.examinee.EditExamineeAction" validate="false">
+      <forward name="success" path="/admin/examinee/editExaminee.jsp" />
+    </action>
+    <action input="/admin/examinee/addExaminee.jsp" name="examineeActionForm" path="/admin/examinee/saveAddExaminee" type="org.mmxbb.exam.business.examinee.SaveAddExamineeAction" validate="true">
+      <forward name="success" path="/admin/examinee/showExaminee.do" />
+    </action>
+    <action input="/admin/examinee/editExaminee.jsp" name="examineeActionForm" path="/admin/examinee/saveEditExaminee" type="org.mmxbb.exam.business.examinee.SaveEditExamineeAction" validate="true">
+      <forward name="failure" path="/admin/examinee/editExaminee.do" />
+      <forward name="success" path="/admin/examinee/showExaminee.do" />
+    </action>
+    <action name="examineeActionForm" path="/admin/examinee/showExaminee" type="org.mmxbb.exam.business.examinee.ShowExamineeAction" validate="false">
+      <forward name="success" path="/admin/examinee/index.jsp" />
+    </action>
+    <action name="examineeTestDetailsActionForm" path="/admin/examinee/examineeTestDetails" type="org.mmxbb.exam.business.examinee.ExamineeTestDetailsAction">
+      <forward name="success" path="/admin/examinee/details.jsp" />
+    </action>
+    <action input="/index.jsp" name="logonForm" path="/logon" type="org.mmxbb.exam.business.LogonAction" validate="false">
+      <forward name="failure" path="/index.jsp" />
+    </action>
+    
+      <action input="/adminindex.jsp" name="logonForm" path="/showAdminlogin" type="org.mmxbb.exam.business.AdminLogonAction" validate="false">
+      <forward name="failure" path="/adminindex.jsp" />
+    </action>
+    
+    <action path="/logoff" type="org.mmxbb.exam.business.LogoffAction">
+      <forward name="success" path="/index.jsp" />
+    </action>
+    <action forward="/admin/editPwd.jsp" path="/admin/editPwd" validate="false" />
+    <action input="/admin/editPwd.jsp" name="editAdminPwdActionForm" path="/admin/SaveEditPwd" type="org.mmxbb.exam.business.EditAdminPwdAction" validate="false">
+      <forward name="successsaveeditpwd" path="/admin/successSaveEditPwd.jsp" />
+    </action>
+    <action name="searchActionForm" path="/admin/program/searchAction" type="org.mmxbb.exam.business.program.SearchAction">
+      <forward name="e_distribute" path="/admin/program/e_distribute.jsp" />
+      <forward name="grade_main" path="/admin/program/e_grade_main.jsp" />
+      <forward name="e_manage" path="/admin/program/e_manage.jsp" />
+      <forward name="e_list" path="/admin/program/e_list.jsp" />
+    </action>
+    <action input="/admin/program/e_grade_question.jsp" name="gradeActionForm" parameter="method" path="/admin/program/gradeAction" scope="request" type="org.mmxbb.exam.business.program.GradeAction" validate="true">
+      <forward name="showExaminationJsp" path="/admin/program/e_grade_examination.jsp" />
+      <forward name="showTestJsp" path="/admin/program/e_grade_test.jsp" />
+      <forward name="showQuestionJsp" path="/admin/program/e_grade_question.jsp" />
+    </action>
+    <action name="chooseExamineeActionForm" path="/admin/program/chooseExaminee" type="org.mmxbb.exam.business.program.ChooseExamineeAction" validate="false">
+      <forward name="success" path="/admin/program/examineeChooser.jsp" />
+    </action>
+    <action input="/admin/program/examineeChooser.jsp" name="chooseExamineeActionForm" path="/admin/program/saveChooseExamineeAction" type="org.mmxbb.exam.business.program.SaveChooseExamineeAction" validate="true">
+      <forward name="success" path="/admin/program/searchAction.do?jsp=e_distribute" />
+    </action>
+    <action name="distributeActionForm" path="/admin/program/examBeginAction" type="org.mmxbb.exam.business.program.ExamBeginAction">
+      <forward name="examBegin" path="/admin/program/searchAction.do?jsp=e_distribute" />
+    </action>
+    <action name="distributeActionForm" path="/admin/program/controlAction" type="org.mmxbb.exam.business.program.ControlAction">
+      <forward name="e_control" path="/admin/program/e_control.jsp" />
+    </action>
+    <action name="distributeActionForm" path="/admin/program/absenceAction" type="org.mmxbb.exam.business.program.AbsenceAction">
+      <forward name="e_absence" path="/admin/program/e_absence.jsp" />
+    </action>
+    <action name="searchActionForm" path="/admin/program/statisticAction" type="org.mmxbb.exam.business.program.StatisticAction">
+      <forward name="e_statistic" path="/admin/program/e_statistic.jsp" />
+    </action>
+    <action name="examTestActionForm" path="/exam/showExamTestAction" type="org.mmxbb.exam.business.exam.ShowExamTestAction">
+      <forward name="examtest" path="/exam/showTest.jsp" />
+    </action>
+    <action input="/exam/examTest.jsp" name="examTestActionForm" path="/exam/saveTestPaper" type="org.mmxbb.exam.business.exam.SaveTestPaperAction">
+      <forward name="suceesssubmitexamtest" path="/exam/suceessSubmitExamTest.jsp" />
+    </action>
+    <action name="examTestActionForm" path="/exam/inquryExamAction" scope="request" type="org.mmxbb.exam.business.exam.InquryExamAction">
+      <forward name="inquryexam" path="/exam/inquryExam.jsp" />
+    </action>
+    <action input="/exam/editExaminee.jsp" name="examineeActionForm" path="/exam/saveEditExaminee" type="org.mmxbb.exam.business.exam.SaveEditExamineeAction" validate="true">
+      <forward name="editexaminee" path="/exam/editExaminee.do" />
+    </action>
+    <action name="examineeActionForm" path="/exam/editExaminee" type="org.mmxbb.exam.business.exam.EditExamineeAction">
+      <forward name="success" path="/exam/editExaminee.jsp" />
+    </action>
+    <action input="/admin/trainPlan/addTrainPlan.jsp" name="trainPlanForm" path="/admin/trainPlan/addTrainPlanAction" scope="request" type="org.mmxbb.exam.business.trainPlan.AddTrainPlanAction" validate="true">
+      <forward name="addtrainplansuccess" path="/admin/trainPlan/addTrainPlanSuccess.jsp" />
+    </action>
+    <action input="/admin/trainPlan/addTrainPlan.jsp" name="trainPlanForm" path="/admin/trainPlan/initAddAction" scope="request" type="org.mmxbb.exam.business.trainPlan.InitAddAction" validate="false">
+      <forward name="addtrainplan" path="/admin/trainPlan/addTrainPlan.jsp" />
+    </action>
+    <action input="/admin/trainPlan/listTrainPlan.jsp" name="quireTrainPlanForm" path="/admin/trainPlan/quireTrainPlanAction" scope="request" type="org.mmxbb.exam.business.trainPlan.QuireTrainPlanAction" validate="false">
+      <forward name="listtrainplan" path="/admin/trainPlan/listTrainPlan.jsp" />
+    </action>
+    <action input="/admin/trainPlan/listTrainPlan.jsp" name="quireTrainPlanForm" path="/admin/trainPlan/deleteTrainPlanAction" scope="request" type="org.mmxbb.exam.business.trainPlan.DeleteTrainPlanAction" validate="false">
+      <forward name="quiretrainplanaction" path="/admin/trainPlan/quireTrainPlanAction.do" />
+    </action>
+    <action name="trainPlanForm" path="/admin/trainPlan/editTrainPlanAction" scope="request" type="org.mmxbb.exam.business.trainPlan.EditTrainPlanAction" validate="false">
+      <forward name="edittrainplan" path="/admin/trainPlan/editTrainPlan.jsp" />
+    </action>
+    <action input="/admin/trainPlan/editTrainPlan.jsp" name="trainPlanForm" path="/admin/trainPlan/deleteAccessoryAction" scope="request" type="org.mmxbb.exam.business.trainPlan.DeleteAccessoryAction" validate="false">
+      <forward name="edittrainplanaction" path="/admin/trainPlan/editTrainPlanAction.do" />
+    </action>
+    <action input="/admin/trainPlan/editTrainPlan.jsp" name="trainPlanForm" path="/admin/trainPlan/updateTrainPlanAction" scope="request" type="org.mmxbb.exam.business.trainPlan.UpdateTrainPlanAction" validate="true">
+      <forward name="edittrainplanaction" path="/admin/trainPlan/editTrainPlanAction.do" />
+    </action>
+    <action input="/admin/menu.jsp" path="/admin/question/initialQuestionAction" scope="request" type="org.mmxbb.exam.business.question.InitialQuestionAction" validate="true">
+      <forward name="single" path="/admin/question/Q_add_single.jsp" />
+      <forward name="multi" path="/admin/question/Q_add_multi.jsp" />
+      <forward name="fitin" path="/admin/question/Q_add_fitin.jsp" />
+      <forward name="answer" path="/admin/question/Q_add_answer.jsp" />
+    </action>
+    <action input="/admin/question/Q_list.jsp" name="questionActionForm" path="/admin/question/listQuestionAction" scope="request" type="org.mmxbb.exam.business.question.ListQuestionAction" validate="false">
+      <forward name="success" path="/admin/question/Q_list.jsp" />
+    </action>
+    <action name="questionActionForm" path="/admin/question/showQuestionDetailsAction" scope="request" type="org.mmxbb.exam.business.question.ShowQuestionDetailsAction" validate="false">
+      <forward name="single" path="/admin/question/Q_show_single.jsp" />
+      <forward name="multi" path="/admin/question/Q_show_multi.jsp" />
+      <forward name="fitin" path="/admin/question/Q_show_fitin.jsp" />
+      <forward name="answer" path="/admin/question/Q_show_answer.jsp" />
+    </action>
+    <action input="/error.jsp" name="questionActionForm" parameter="method" path="/admin/question/AUD_QuestionAction" scope="request" type="org.mmxbb.exam.business.question.AUD_QuestionAction" validate="true">
+      <forward name="list" path="/admin/question/Q_list.jsp" />
+      <forward name="listquestionaction" path="/admin/question/listQuestionAction.do" />
+    </action>
+    <action input="/admin/paper/CreateExaminationPaper.jsp" name="addExaminationPaperForm" path="/admin/paper/addExaminationPaperAction" scope="request" type="org.mmxbb.exam.business.paper.AddExaminationPaperAction" validate="true">
+      <forward name="paperoperasuccessaction" path="/admin/paper/paperOperaSuccessAction.do" />
+    </action>
+    <action name="addExaminationPaperForm" path="/admin/paper/addSelectorAction" scope="request" type="org.mmxbb.exam.business.paper.AddSelectorAction" validate="false">
+      <forward name="createexaminationpaper" path="/admin/paper/CreateExaminationPaper.jsp" />
+    </action>
+    <action name="questionActionForm" path="/admin/paper/toListQuestionAction" scope="request" type="org.mmxbb.exam.business.paper.ToListQuestionAction" validate="false">
+      <forward name="addquestion" path="/admin/paper/AddQuestion.jsp" />
+      <forward name="addmultiquestion" path="/admin/paper/AddMultiQuestion.jsp" />
+      <forward name="addfitinquestion" path="/admin/paper/AddFitinQuestion.jsp" />
+      <forward name="addanswerquestion" path="/admin/paper/AddAnswerQuestion.jsp" />
+    </action>
+    <action name="questionActionForm" path="/admin/paper/addQuestionToExaminationPaperAction" scope="request" type="org.mmxbb.exam.business.paper.AddQuestionToExaminationPaperAction" validate="false">
+      <forward name="addselectoraction" path="/admin/paper/addSelectorAction.do" />
+    </action>
+    <action name="addExaminationPaperForm" path="/exam/examinationPaperListAction" scope="request" type="org.mmxbb.exam.business.paper.ExaminationPaperListAction" validate="false">
+      <forward name="attendtest" path="/exam/AttendTest.jsp" />
+    </action>
+    <action name="editAdminPwdActionForm" path="/exam/editPwd" type="org.mmxbb.exam.business.exam.EditPwdAction" validate="false">
+      <forward name="editpwd" path="/exam/editPwd.jsp" />
+    </action>
+    <action input="/exam/editPwd.jsp" name="editAdminPwdActionForm" path="/exam/saveEditPwd" type="org.mmxbb.exam.business.exam.SaveEditPwdAction">
+      <forward name="sucesssaveexamineepwd" path="/exam/sucessSaveExamineePwd.jsp" />
+    </action>
+    <action path="/admin/paper/clearIdList" type="org.mmxbb.exam.business.paper.ClearIdListAction">
+      <forward name="success" path="/admin/paper/addSelectorAction.do" />
+    </action>
+    <action name="examineeInquiryActionForm" path="/exam/examineeInquiryAction" type="org.mmxbb.exam.business.exam.ExamineeInquiryAction">
+      <forward name="success" path="/exam/ExamineeInquiry.jsp" />
+    </action>
+    <action path="/admin/paper/removeQuestionAction" type="org.mmxbb.exam.business.paper.RemoveQuestionAction">
+      <forward name="searchaction" path="/admin/program/searchAction.do" />
+    </action>
+    <action path="/errorReturnAction" type="org.mmxbb.exam.business.ErrorReturnAction">
+      <forward name="initialquestionaction" path="/admin/question/initialQuestionAction.do" />
+    </action>
+    <action path="/admin/program/stopExamAction" type="org.mmxbb.exam.business.program.StopExamAction">
+      <forward name="searchaction" path="/admin/program/searchAction.do" />
+    </action>
+    <action name="makeSureStopExamTestPaperActionForm" path="/admin/program/makeSureStopExamTestPaperAction" type="org.mmxbb.exam.business.program.MakeSureStopExamTestPaperAction">
+      <forward name="makesurestopexamtestpaper" path="/admin/program/makeSureStopExamTestPaper.jsp" />
+    </action>
+    <action name="makeSureRemoveQuestionForm" path="/admin/paper/makeSureRemoveQuestionAction" type="org.mmxbb.exam.business.paper.MakeSureRemoveQuestionAction">
+      <forward name="makesureremovequestion" path="/admin/paper/makeSureRemoveQuestion.jsp" />
+    </action>
+    <action name="preViewExamTestPaperForm" path="/admin/paper/preViewExamTestPaperAction" type="org.mmxbb.exam.business.paper.PreViewExamTestPaperAction">
+      <forward name="previewexamtestpaper" path="/admin/paper/preViewExamTestPaper.jsp" />
+    </action>
+    <action name="addExaminationPaperForm" path="/admin/paper/inquiryExamTestPaperAction" scope="request" type="org.mmxbb.exam.business.paper.InquiryExamTestPaperAction" validate="false">
+      <forward name="inquiryexamtestpaper" path="/admin/paper/inquiryExamTestPaper.jsp" />
+    </action>
+    <action path="/admin/program/reAttandExamAction" type="org.mmxbb.exam.business.program.ReAttandExamAction">
+      <forward name="controlaction" path="/admin/program/controlAction.do" />
+    </action>
+    <action name="baseInfoActionForm" path="/admin/baseInfo/baseInfoAction" scope="session" type="org.mmxbb.exam.business.baseinfo.BaseInfoAction" validate="true">
+      <forward name="baseinfo" path="/admin/baseInfo/baseinfo.jsp" />
+    </action>
+    <action name="baseInfoActionForm" path="/admin/baseInfo/maniAction" scope="session" type="org.mmxbb.exam.business.baseinfo.ManiAction" validate="true">
+      <forward name="baseinfoaction" path="/admin/baseInfo/baseInfoAction.do" />
+    </action>
+    <action name="randomDistributeExamPaperForm" path="/admin/program/initRandomDistributeAction" type="org.mmxbb.exam.business.program.InitRandomDistributeAction" validate="false">
+      <forward name="randomdistribute" path="/admin/program/randomDistribute.jsp" />
+    </action>
+    <action input="/admin/program/validateRandomDistribute.jsp" name="randomDistributeExamPaperForm" path="/admin/program/doRandomDistributeAction" type="org.mmxbb.exam.business.program.DoRandomDistributeAction" validate="true">
+      <forward name="randomdistributedlist" path="/admin/program/randomDistributedList.jsp" />
+    </action>
+    <action name="quireTrainPlanForm" path="/exam/examineeQuireTrainPlanAction" type="org.mmxbb.exam.business.exam.ExamineeQuireTrainPlanAction">
+      <forward name="examineequiretrainplan" path="/exam/examineeQuireTrainPlan.jsp" />
+    </action>
+    <action name="trainPlanForm" path="/exam/examineeShowTrainPlanAction" type="org.mmxbb.exam.business.exam.ExamineeShowTrainPlanAction" validate="false">
+      <forward name="examineeshowtrainplan" path="/exam/examineeShowTrainPlan.jsp" />
+    </action>
+    <action path="/admin/paper/paperOperaSuccessAction" type="org.mmxbb.exam.business.paper.PaperOperaSuccessAction">
+      <forward name="paperoperasuccess" path="/admin/paper/paperOperaSuccess.jsp" />
+    </action>
+    <action path="/admin/trainPlan/makeSureDeleteFileForeverAction" type="org.mmxbb.exam.business.trainPlan.MakeSureDeleteFileForeverAction">
+      <forward name="makesuredeletefileforever" path="/admin/trainPlan/makeSureDeleteFileForever.jsp" />
+    </action>
+    <action path="/portalLogonAction" type="org.mmxbb.exam.business.PortalLogonAction" />
+  </action-mappings>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+  </plug-in>
+  <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+    <set-property property="menuConfig" value="/WEB-INF/menu-config.xml" />
+  </plug-in>
+</struts-config>

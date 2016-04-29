@@ -1,0 +1,40 @@
+<Context path="/exam" docBase="D:\BookSource\jsp\chpt7\WebRoot" debug="5" reloadable="true" crossContext="true">
+    <Logger className="org.apache.catalina.logger.FileLogger"
+      prefix="localhost_exam_log." suffix=".txt"
+      timestamp="true"/> <!-- 定义log文件 -->
+<Resource name="jdbc/exam"  auth="Container" type="javax.sql.DataSource"/>
+    <ResourceParams name="jdbc/exam"> <!-- 定义环境的Context  -->
+    <parameter>
+     <name>factory</name> <!-- 定义连接池的产生工厂类 -->
+     <value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
+   </parameter>
+   <parameter>
+     <name>maxActive</name> <!-- 定义最大的连接数 -->
+     <value>20</value>
+   </parameter>
+   <parameter>
+     <name>maxIdle</name> <!-- 定义最大的空闲连接数 -->
+     <value>5</value>
+   </parameter>
+   <parameter>
+     <name>maxWait</name> <!-- 定义最长等待时间  -->
+     <value>10000</value>
+   </parameter>
+  <parameter>
+    <name>username</name> <!-- 定义数据库访问的用户名 -->
+    <value>root</value>
+   </parameter>
+   <parameter>
+    <name>password</name> <!-- 定义数据库访问的密码 -->
+    <value>root</value>
+   </parameter>
+   <parameter>
+     <name>driverClassName</name>
+    <value>com.mysql.jdbc.Driver</value> <!--定义连接的驱动程序，这里是MySQL的-->
+   </parameter>
+   <parameter>
+     <name>url</name> <!-- 定义数据库连接的url-->
+<value>jdbc:mysql://localhost:3306/exam?useUnicode=true&amp;characterEncoding=gbk</value>
+   </parameter>
+    </ResourceParams>
+</Context>
